@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>Welcome to the Black Jack</h2>
+
+  <p>Your score: <%= @your_score %> Bank: <%= @bank_score %></p>
+  <p>Card?</p>
+  <form action="#">
+    <input type="text" name="answer">
+    <input type="hidden" name="bank_score" value="<%= @bank_score%>">
+    <input type="hidden" name="your_score" value="<%= @your_score %>">
+    <input type="submit">
+  </form>
+
+  <% if @message %>
+    <p><%= @message %></p>
+    <%= link_to 'play again!', root_path %>
+  <% end %>
+</div>
